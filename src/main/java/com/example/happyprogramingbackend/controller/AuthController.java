@@ -1,23 +1,15 @@
-package com.example.happyprogramingbackend.Controller;
+package com.example.happyprogramingbackend.controller;
 
 
 import com.example.happyprogramingbackend.Dto.Request.CheckEmailDto;
 import com.example.happyprogramingbackend.Dto.Request.CreateUserDto;
 import com.example.happyprogramingbackend.Dto.Request.LoginRequest;
-import com.example.happyprogramingbackend.Dto.Response.UserResponse;
-import com.example.happyprogramingbackend.Entity.User;
 import com.example.happyprogramingbackend.Service.AuthService;
 import com.example.happyprogramingbackend.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.thymeleaf.spring6.view.ThymeleafView;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 public class AuthController {
