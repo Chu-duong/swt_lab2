@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Common;
+package com.example.happyprogramingbackend.common;
 
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;

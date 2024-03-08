@@ -1,17 +1,12 @@
 package com.example.happyprogramingbackend.Controller;
 
-import com.example.happyprogramingbackend.Common.JwtTokenUtil;
 import com.example.happyprogramingbackend.Dto.Request.*;
 import com.example.happyprogramingbackend.Entity.User;
 import com.example.happyprogramingbackend.Service.UserService;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwt;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 

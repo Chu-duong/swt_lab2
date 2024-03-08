@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Common;
+package com.example.happyprogramingbackend.common;
 
 import com.example.happyprogramingbackend.Exception.ErrorMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;

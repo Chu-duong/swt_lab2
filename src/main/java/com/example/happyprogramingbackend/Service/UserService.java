@@ -1,9 +1,8 @@
 package com.example.happyprogramingbackend.Service;
 
-import com.example.happyprogramingbackend.Common.Ultil;
+import com.example.happyprogramingbackend.common.Ultil;
 import com.example.happyprogramingbackend.Dto.Request.CreateUserDto;
 import com.example.happyprogramingbackend.Dto.Request.RejectStudent;
-import com.example.happyprogramingbackend.Dto.Request.SearchUserDto;
 import com.example.happyprogramingbackend.Dto.Request.UpdateUserDto;
 import com.example.happyprogramingbackend.Dto.Response.UserResponse;
 import com.example.happyprogramingbackend.Entity.*;
@@ -16,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.*;
 
 @Service

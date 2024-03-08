@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Common;
+package com.example.happyprogramingbackend.common;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
