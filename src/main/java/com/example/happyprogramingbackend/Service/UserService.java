@@ -1,14 +1,18 @@
-package com.example.happyprogramingbackend.Service;
+package com.example.happyprogramingbackend.service;
 
 import com.example.happyprogramingbackend.common.Ultil;
-import com.example.happyprogramingbackend.dto.Request.CreateUserDto;
-import com.example.happyprogramingbackend.dto.Request.RejectStudent;
-import com.example.happyprogramingbackend.dto.Request.UpdateUserDto;
-import com.example.happyprogramingbackend.dto.Response.UserResponse;
+import com.example.happyprogramingbackend.dto.request.CreateUserDto;
+import com.example.happyprogramingbackend.dto.request.RejectStudent;
+import com.example.happyprogramingbackend.dto.request.UpdateUserDto;
+import com.example.happyprogramingbackend.dto.response.UserResponse;
+import com.example.happyprogramingbackend.dto.request.CreateUserDto;
+import com.example.happyprogramingbackend.dto.request.RejectStudent;
+import com.example.happyprogramingbackend.dto.request.UpdateUserDto;
+import com.example.happyprogramingbackend.dto.response.UserResponse;
 import com.example.happyprogramingbackend.entity.*;
-import com.example.happyprogramingbackend.Exception.BadRequestException;
-import com.example.happyprogramingbackend.Exception.NotFoundException;
-import com.example.happyprogramingbackend.Repository.*;
+import com.example.happyprogramingbackend.exception.BadRequestException;
+import com.example.happyprogramingbackend.exception.NotFoundException;
+import com.example.happyprogramingbackend.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

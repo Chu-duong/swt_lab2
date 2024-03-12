@@ -1,6 +1,6 @@
 package com.example.happyprogramingbackend.common;
 
-import com.example.happyprogramingbackend.Exception.ErrorMessage;
+import com.example.happyprogramingbackend.exception.ErrorMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,8 +1,10 @@
-package com.example.happyprogramingbackend.Service;
+package com.example.happyprogramingbackend.service;
 
 import com.example.happyprogramingbackend.common.JwtTokenUtil;
-import com.example.happyprogramingbackend.dto.Request.LoginRequest;
-import com.example.happyprogramingbackend.dto.Response.LoginResponse;
+import com.example.happyprogramingbackend.dto.request.LoginRequest;
+import com.example.happyprogramingbackend.dto.response.LoginResponse;
+import com.example.happyprogramingbackend.dto.request.LoginRequest;
+import com.example.happyprogramingbackend.dto.response.LoginResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;

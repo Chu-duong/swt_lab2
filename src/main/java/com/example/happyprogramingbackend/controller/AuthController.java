@@ -1,11 +1,11 @@
 package com.example.happyprogramingbackend.controller;
 
 
-import com.example.happyprogramingbackend.dto.Request.CheckEmailDto;
-import com.example.happyprogramingbackend.dto.Request.CreateUserDto;
-import com.example.happyprogramingbackend.dto.Request.LoginRequest;
-import com.example.happyprogramingbackend.Service.AuthService;
-import com.example.happyprogramingbackend.Service.UserService;
+import com.example.happyprogramingbackend.dto.request.CheckEmailDto;
+import com.example.happyprogramingbackend.dto.request.CreateUserDto;
+import com.example.happyprogramingbackend.dto.request.LoginRequest;
+import com.example.happyprogramingbackend.service.AuthService;
+import com.example.happyprogramingbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
