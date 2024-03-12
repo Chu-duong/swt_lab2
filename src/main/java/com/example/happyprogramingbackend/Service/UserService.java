@@ -1,11 +1,11 @@
 package com.example.happyprogramingbackend.Service;
 
 import com.example.happyprogramingbackend.common.Ultil;
-import com.example.happyprogramingbackend.Dto.Request.CreateUserDto;
-import com.example.happyprogramingbackend.Dto.Request.RejectStudent;
-import com.example.happyprogramingbackend.Dto.Request.UpdateUserDto;
-import com.example.happyprogramingbackend.Dto.Response.UserResponse;
-import com.example.happyprogramingbackend.Entity.*;
+import com.example.happyprogramingbackend.dto.request.CreateUserDto;
+import com.example.happyprogramingbackend.dto.request.RejectStudent;
+import com.example.happyprogramingbackend.dto.request.UpdateUserDto;
+import com.example.happyprogramingbackend.dto.response.UserResponse;
+import com.example.happyprogramingbackend.entity.*;
 import com.example.happyprogramingbackend.Exception.BadRequestException;
 import com.example.happyprogramingbackend.Exception.NotFoundException;
 import com.example.happyprogramingbackend.Repository.*;

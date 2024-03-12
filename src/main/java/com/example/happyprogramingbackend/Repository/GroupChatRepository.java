@@ -1,12 +1,8 @@
 package com.example.happyprogramingbackend.Repository;
 
-import com.example.happyprogramingbackend.Entity.Course;
-import com.example.happyprogramingbackend.Entity.GroupChat;
+import com.example.happyprogramingbackend.entity.GroupChat;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface GroupChatRepository extends JpaRepository<GroupChat, Long> {}
