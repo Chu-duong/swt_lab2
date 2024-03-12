@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Controller;
+package com.example.happyprogramingbackend.controller;
 
 import com.example.happyprogramingbackend.Dto.Request.*;
 import com.example.happyprogramingbackend.Entity.User;

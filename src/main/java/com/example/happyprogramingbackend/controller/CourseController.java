@@ -1,9 +1,8 @@
-package com.example.happyprogramingbackend.Controller;
+package com.example.happyprogramingbackend.controller;
 
 import com.example.happyprogramingbackend.Dto.Request.*;
 import com.example.happyprogramingbackend.Entity.User;
 import com.example.happyprogramingbackend.Service.CourseService;
-import com.example.happyprogramingbackend.Service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
