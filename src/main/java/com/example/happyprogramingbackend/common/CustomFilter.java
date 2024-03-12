@@ -19,13 +19,16 @@ import java.io.IOException;
 @Component
 @Slf4j
 public class CustomFilter extends OncePerRequestFilter {
-    @Autowired
-    private UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
 
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
+    private final JwtTokenUtil jwtTokenUtil;
 
-    @Override
+  public CustomFilter(UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil) {
+    this.userDetailsService = userDetailsService;
+    this.jwtTokenUtil = jwtTokenUtil;
+  }
+
+  @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         // Lấy token từ header

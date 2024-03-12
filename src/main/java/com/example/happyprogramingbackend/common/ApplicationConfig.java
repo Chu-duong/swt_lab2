@@ -15,10 +15,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class ApplicationConfig {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    // Tạo đối tượng mã hóa
+  public ApplicationConfig(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
+
+  // Tạo đối tượng mã hóa
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
