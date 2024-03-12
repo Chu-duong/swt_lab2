@@ -1,8 +1,6 @@
 package com.example.happyprogramingbackend.Repository;
 
-import com.example.happyprogramingbackend.Entity.ChatDetail;
-import com.example.happyprogramingbackend.Entity.Course;
-import com.example.happyprogramingbackend.Entity.GroupChat;
+import com.example.happyprogramingbackend.entity.ChatDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

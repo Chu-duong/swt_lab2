@@ -1,7 +1,7 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.Dto.Request.*;
-import com.example.happyprogramingbackend.Entity.User;
+import com.example.happyprogramingbackend.dto.request.*;
+import com.example.happyprogramingbackend.entity.User;
 import com.example.happyprogramingbackend.Service.CourseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
