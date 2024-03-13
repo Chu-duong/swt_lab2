@@ -1,8 +1,8 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.Course;
-import com.example.happyprogramingbackend.Entity.Lesson;
-import com.example.happyprogramingbackend.Entity.User;
+import com.example.happyprogramingbackend.entity.Course;
+import com.example.happyprogramingbackend.entity.Lesson;
+import com.example.happyprogramingbackend.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

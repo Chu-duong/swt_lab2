@@ -1,10 +1,7 @@
-package com.example.happyprogramingbackend.Entity;
+package com.example.happyprogramingbackend.entity;
 
-import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.*;
 

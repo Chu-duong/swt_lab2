@@ -1,19 +1,10 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.*;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.happyprogramingbackend.entity.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 
 @Getter

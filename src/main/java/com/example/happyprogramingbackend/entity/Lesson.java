@@ -1,6 +1,5 @@
-package com.example.happyprogramingbackend.Entity;
+package com.example.happyprogramingbackend.entity;
 
-import com.example.happyprogramingbackend.Dto.Response.CommentResponseImp;
 import jakarta.persistence.*;
 import lombok.*;
 

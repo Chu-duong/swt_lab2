@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Entity;
+package com.example.happyprogramingbackend.entity;
 
 import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;

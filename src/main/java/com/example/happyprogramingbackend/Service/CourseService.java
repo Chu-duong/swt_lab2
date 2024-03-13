@@ -1,20 +1,16 @@
 package com.example.happyprogramingbackend.Service;
 
-import com.example.happyprogramingbackend.Dto.Request.*;
-import com.example.happyprogramingbackend.Dto.Response.ChatDetailResponseImp;
-import com.example.happyprogramingbackend.Dto.Response.CommentResponseImp;
-import com.example.happyprogramingbackend.Dto.Response.CourseResponse;
-import com.example.happyprogramingbackend.Dto.Response.LessonResponse;
-import com.example.happyprogramingbackend.Entity.*;
+import com.example.happyprogramingbackend.dto.Request.*;
+import com.example.happyprogramingbackend.dto.Response.ChatDetailResponseImp;
+import com.example.happyprogramingbackend.dto.Response.CommentResponseImp;
+import com.example.happyprogramingbackend.dto.Response.CourseResponse;
+import com.example.happyprogramingbackend.dto.Response.LessonResponse;
+import com.example.happyprogramingbackend.entity.*;
 import com.example.happyprogramingbackend.Exception.BadRequestException;
-import com.example.happyprogramingbackend.Exception.NotFoundException;
 import com.example.happyprogramingbackend.Repository.*;
-import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

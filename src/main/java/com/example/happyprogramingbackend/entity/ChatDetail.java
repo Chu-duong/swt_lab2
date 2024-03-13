@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Entity;
+package com.example.happyprogramingbackend.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -10,8 +10,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "mentee_course")
-public class MenteeCourse extends BaseEntity {
+@Table(name = "chat_detail")
+public class ChatDetail extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, unique = true)
@@ -19,16 +19,17 @@ public class MenteeCourse extends BaseEntity {
 
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "student_id")
-    private User student;
+    @JoinColumn(name = "user_id")
+    private User user;
+
+
 
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "course_id")
-    private Course course;
+    @JoinColumn(name = "group_chat_id")
+    private GroupChat groupChat;
 
-    @Column(name = "status", nullable = false)
-    private String status = "waiting";
-
+    @Column(name = "type", nullable = true)
+    private String type;
 
 }

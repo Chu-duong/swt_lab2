@@ -1,7 +1,7 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.Role;
-import com.example.happyprogramingbackend.Entity.User;
+import com.example.happyprogramingbackend.entity.Role;
+import com.example.happyprogramingbackend.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

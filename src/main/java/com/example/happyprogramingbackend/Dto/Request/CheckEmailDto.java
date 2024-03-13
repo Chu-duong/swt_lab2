@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Dto.Request;
+package com.example.happyprogramingbackend.dto.Request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

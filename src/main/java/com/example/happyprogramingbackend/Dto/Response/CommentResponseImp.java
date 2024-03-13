@@ -1,18 +1,12 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.Comment;
-import com.example.happyprogramingbackend.Entity.Course;
-import com.example.happyprogramingbackend.Entity.Lesson;
-import com.example.happyprogramingbackend.Entity.User;
+import com.example.happyprogramingbackend.entity.Comment;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter

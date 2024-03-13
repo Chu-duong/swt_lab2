@@ -1,7 +1,6 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.Notification;
-import com.example.happyprogramingbackend.Entity.User;
+import com.example.happyprogramingbackend.entity.Notification;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

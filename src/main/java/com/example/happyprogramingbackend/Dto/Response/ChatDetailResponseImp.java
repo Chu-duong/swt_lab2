@@ -1,14 +1,10 @@
-package com.example.happyprogramingbackend.Dto.Response;
+package com.example.happyprogramingbackend.dto.Response;
 
-import com.example.happyprogramingbackend.Entity.ChatDetail;
-import com.example.happyprogramingbackend.Entity.Comment;
-import com.example.happyprogramingbackend.Entity.GroupChat;
+import com.example.happyprogramingbackend.entity.ChatDetail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Date;
 
 @Getter
 @Setter
