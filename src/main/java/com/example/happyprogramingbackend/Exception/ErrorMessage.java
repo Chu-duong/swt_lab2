@@ -11,6 +11,6 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ErrorMessage {
-    private HttpStatus status;
-    private Object Message;
+  private HttpStatus status;
+  private Object Message;
 }

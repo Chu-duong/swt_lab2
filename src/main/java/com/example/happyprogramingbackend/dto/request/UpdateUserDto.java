@@ -12,25 +12,25 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateUserDto {
-    private String password;
+  private String password;
 
-    private String rePassword;
+  private String rePassword;
 
-    private String firstName;
+  private String firstName;
 
-    private String lastName;
+  private String lastName;
 
-    private String middleName;
+  private String middleName;
 
-    private Date birthday;
+  private Date birthday;
 
-    private String gender;
+  private String gender;
 
-    private Boolean isActive;
+  private Boolean isActive;
 
-    private String description;
+  private String description;
 
-    private String skills;
+  private String skills;
 
-    private String avatar;
+  private String avatar;
 }

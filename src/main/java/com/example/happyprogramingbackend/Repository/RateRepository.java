@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RateRepository extends JpaRepository<Rate, Long> {
 
-    @Query("SELECT m FROM Rate m where m.rated.id = ?2 and m.ratedBy.id= ?1")
-    Rate getByStudentId(Long studentId,Long teacherId);
-
+  @Query("SELECT m FROM Rate m where m.rated.id = ?2 and m.ratedBy.id= ?1")
+  Rate getByStudentId(Long studentId, Long teacherId);
 }

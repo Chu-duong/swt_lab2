@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateCommentDto {
-    private Long lessonId;
+  private Long lessonId;
 
-    private String description;
+  private String description;
 }

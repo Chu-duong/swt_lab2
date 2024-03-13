@@ -12,17 +12,22 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginResponse {
-    private UserDetails auth;
-    private String token;
-    @JsonProperty("isAuthenticated")
-    private boolean isAuthenticated;
+  private UserDetails auth;
+  private String token;
 
-    @Override
-    public String toString() {
-        return "LoginResponse{" +
-                "auth=" + auth +
-                ", token='" + token + '\'' +
-                ", isAuthenticated=" + isAuthenticated +
-                '}';
-    }
+  @JsonProperty("isAuthenticated")
+  private boolean isAuthenticated;
+
+  @Override
+  public String toString() {
+    return "LoginResponse{"
+        + "auth="
+        + auth
+        + ", token='"
+        + token
+        + '\''
+        + ", isAuthenticated="
+        + isAuthenticated
+        + '}';
+  }
 }

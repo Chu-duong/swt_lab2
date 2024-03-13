@@ -11,24 +11,29 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChatDetailResponseImp {
-    private Long id;
-    private Long groupChatId;
+  private Long id;
+  private Long groupChatId;
 
-    private String avatar;
+  private String avatar;
 
-    private String key;
-    private String status;
-    private Boolean statusCourse;
-    public ChatDetailResponseImp(ChatDetail entity,String role) {
-        this.id = entity.getId();
-        this.avatar = entity.getGroupChat().getCourse().getAvatar();
-        this.key = entity.getGroupChat().getCourse().getName();
-        this.groupChatId = entity.getGroupChat().getId();
-        if(role == "TC") {
-            this.status = (entity.getGroupChat().getCourse()
-                    .getStudents().stream().filter(menteeCourse -> menteeCourse.getStudent().getId() == entity.getUser().getId()).findFirst()).get().getStatus();
-        }
-       this.statusCourse=entity.getGroupChat().getCourse().getIsActive();
+  private String key;
+  private String status;
+  private Boolean statusCourse;
 
+  public ChatDetailResponseImp(ChatDetail entity, String role) {
+    this.id = entity.getId();
+    this.avatar = entity.getGroupChat().getCourse().getAvatar();
+    this.key = entity.getGroupChat().getCourse().getName();
+    this.groupChatId = entity.getGroupChat().getId();
+    if (role == "TC") {
+      this.status =
+          (entity.getGroupChat().getCourse().getStudents().stream()
+                  .filter(
+                      menteeCourse -> menteeCourse.getStudent().getId() == entity.getUser().getId())
+                  .findFirst())
+              .get()
+              .getStatus();
     }
+    this.statusCourse = entity.getGroupChat().getCourse().getIsActive();
+  }
 }

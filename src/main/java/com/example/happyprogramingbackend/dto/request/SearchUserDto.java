@@ -10,10 +10,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SearchUserDto {
-    private Long roleId;
+  private Long roleId;
 
-    private String searchKey;
+  private String searchKey;
 
-    private int page;
-
+  private int page;
 }

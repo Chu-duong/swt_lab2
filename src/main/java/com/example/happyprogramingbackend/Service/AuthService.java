@@ -17,31 +17,29 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthService {
-    private final AuthenticationManager authenticationManager;
-    private final UserService userService;
-    private final UserDetailsService userDetailsService;
-    private final JwtTokenUtil jwtTokenUtil;
+  private final AuthenticationManager authenticationManager;
+  private final UserService userService;
+  private final UserDetailsService userDetailsService;
+  private final JwtTokenUtil jwtTokenUtil;
 
-    public LoginResponse authenticateUser(LoginRequest request) {
-        log.info("Request : {}", request);
-        // Tạo đối tượng
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
-                request.getUsername(),
-                request.getPassword()
-        );
+  public LoginResponse authenticateUser(LoginRequest request) {
+    log.info("Request : {}", request);
+    // Tạo đối tượng
+    UsernamePasswordAuthenticationToken token =
+        new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword());
 
-        // Xác thực từ username và password.
-        Authentication authentication = authenticationManager.authenticate(token);
-        log.info("Authentication : {}", authentication);
+    // Xác thực từ username và password.
+    Authentication authentication = authenticationManager.authenticate(token);
+    log.info("Authentication : {}", authentication);
 
-        // Nếu không xảy ra exception tức là thông tin hợp lệ
-        // Set thông tin authentication vào Security Context
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+    // Nếu không xảy ra exception tức là thông tin hợp lệ
+    // Set thông tin authentication vào Security Context
+    SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        // Tạo token và trả về cho client
-        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
-        String tokenJwt = jwtTokenUtil.generateToken(userDetails);
+    // Tạo token và trả về cho client
+    UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
+    String tokenJwt = jwtTokenUtil.generateToken(userDetails);
 
-        return new LoginResponse(null, tokenJwt, true);
-    }
+    return new LoginResponse(null, tokenJwt, true);
+  }
 }

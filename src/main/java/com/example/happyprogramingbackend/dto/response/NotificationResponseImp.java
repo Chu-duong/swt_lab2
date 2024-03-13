@@ -6,24 +6,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class NotificationResponseImp {
-    private String sendBy;
+  private String sendBy;
 
-    private String sendByAvatar;
+  private String sendByAvatar;
 
-    private String description;
+  private String description;
 
+  public NotificationResponseImp(Notification entity) {
 
-    public NotificationResponseImp(Notification entity) {
-
-        this.sendByAvatar = entity.getCreatedBy().getAvatar();
-        this.sendBy = entity.getCreatedBy().getEmail();
-        this.description = entity.getDescription();
-
-    }
+    this.sendByAvatar = entity.getCreatedBy().getAvatar();
+    this.sendBy = entity.getCreatedBy().getEmail();
+    this.description = entity.getDescription();
+  }
 }
