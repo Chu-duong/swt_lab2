@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.dto.Request;
+package com.example.happyprogramingbackend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,11 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SearchUserDto {
-    private Long roleId;
+public class CreateCommentDto {
+  private Long lessonId;
 
-    private String searchKey;
-
-    private int page;
-
+  private String description;
 }

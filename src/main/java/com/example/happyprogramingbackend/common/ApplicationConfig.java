@@ -1,7 +1,6 @@
 package com.example.happyprogramingbackend.common;
 
 import com.example.happyprogramingbackend.Repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,10 +14,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class ApplicationConfig {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    // Tạo đối tượng mã hóa
+  public ApplicationConfig(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
+
+  // Tạo đối tượng mã hóa
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

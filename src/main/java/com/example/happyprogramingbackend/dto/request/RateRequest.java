@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.dto.Request;
+package com.example.happyprogramingbackend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RateRequest {
-    private Long teacherId;
-    private Float rateValue;
-
+  private Long teacherId;
+  private Float rateValue;
 }

@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.dto.Request;
+package com.example.happyprogramingbackend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,10 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateLesson {
-    private String subject;
+  private String subject;
 
-    private String description;
+  private String description;
 
-    private String files;
-
+  private String files;
 }

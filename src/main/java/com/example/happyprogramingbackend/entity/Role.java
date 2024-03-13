@@ -14,19 +14,18 @@ import java.util.List;
 @Entity
 @Table(name = "role")
 public class Role {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id", nullable = false, unique = true)
+  private Long id;
 
-    @Column(name = "role_name")
-    private String roleName;
+  @Column(name = "role_name")
+  private String roleName;
 
-    @Column(name = "role_key")
-    private String roleKey;
+  @Column(name = "role_key")
+  private String roleKey;
 
-    @OneToMany(mappedBy = "role")
-    @Transient
-    private List<User> users = new ArrayList<>();
-
+  @OneToMany(mappedBy = "role")
+  @Transient
+  private List<User> users = new ArrayList<>();
 }

@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.dto.Request;
+package com.example.happyprogramingbackend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateCommentDto {
-    private String description;
+public class SearchUserDto {
+  private Long roleId;
+
+  private String searchKey;
+
+  private int page;
 }

@@ -14,14 +14,14 @@ import java.util.Date;
 @NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity {
-    @CreationTimestamp
-    @Column(name = "created_at")
-    private Date createdAt;
+  @CreationTimestamp
+  @Column(name = "created_at")
+  private Date createdAt;
 
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private Date updatedAt;
+  @UpdateTimestamp
+  @Column(name = "updated_at")
+  private Date updatedAt;
 
-    @Column(name = "is_active")
-    private Boolean isActive = true;
+  @Column(name = "is_active")
+  private Boolean isActive = true;
 }

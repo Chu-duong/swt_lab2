@@ -2,12 +2,10 @@ package com.example.happyprogramingbackend.entity;
 
 import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
+import java.util.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.*;
-
 
 @Builder
 @Getter

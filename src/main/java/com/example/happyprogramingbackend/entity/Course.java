@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.util.*;
 
-
 @Builder
 @Getter
 @Setter
@@ -14,45 +13,42 @@ import java.util.*;
 @Entity
 @Table(name = "course")
 public class Course extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id", nullable = false, unique = true)
+  private Long id;
 
-    @Column(name = "course_key")
-    private String courseKey;
+  @Column(name = "course_key")
+  private String courseKey;
 
-    @Column(name = "name")
-    private String name;
+  @Column(name = "name")
+  private String name;
 
-    @Column(name = "description", columnDefinition = "TEXT")
-    private String description;
+  @Column(name = "description", columnDefinition = "TEXT")
+  private String description;
 
-    @Column(name = "avatar")
-    private String avatar;
+  @Column(name = "avatar")
+  private String avatar;
 
-    @ManyToMany()
-    @JoinTable(
-            name = "mentor_course",
-            joinColumns = @JoinColumn(name = "course_id"),
-            inverseJoinColumns = @JoinColumn(name = "mentor_id"))
-    Set<User> mentors;
+  @ManyToMany()
+  @JoinTable(
+      name = "mentor_course",
+      joinColumns = @JoinColumn(name = "course_id"),
+      inverseJoinColumns = @JoinColumn(name = "mentor_id"))
+  Set<User> mentors;
 
+  //    @ManyToMany(mappedBy = "menteeCourse")
+  //    Set<User> students;
 
-//    @ManyToMany(mappedBy = "menteeCourse")
-//    Set<User> students;
+  @OneToMany(mappedBy = "course")
+  private Set<MenteeCourse> students;
 
-    @OneToMany(mappedBy = "course")
-    private Set<MenteeCourse> students;
+  @OneToMany(mappedBy = "course")
+  private List<Lesson> lessons = new ArrayList<>();
 
-    @OneToMany(mappedBy = "course")
-    private List<Lesson> lessons = new ArrayList<>();
+  @Column(name = "group_chat_id")
+  private Long groupChatId;
 
-
-    @Column(name = "group_chat_id")
-    private Long groupChatId;
-
-    @OneToOne(mappedBy = "course")
-    private GroupChat groupChat;
+  @OneToOne(mappedBy = "course")
+  private GroupChat groupChat;
 }
-

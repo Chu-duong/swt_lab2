@@ -10,19 +10,15 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "rate")
-public class Rate extends BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+public class Rate extends BaseEntity {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id", nullable = false, unique = true)
+  private Long id;
 
-    private Float rateValue;
+  private Float rateValue;
 
-    @ManyToOne
-    @JoinColumn()
-    private User ratedBy;
+  @ManyToOne @JoinColumn() private User ratedBy;
 
-    @ManyToOne
-    @JoinColumn()
-    private User rated;
+  @ManyToOne @JoinColumn() private User rated;
 }

@@ -1,13 +1,13 @@
-package com.example.happyprogramingbackend.dto.Response;
+
+package com.example.happyprogramingbackend.dto.response;
 
 import com.example.happyprogramingbackend.entity.Role;
 import com.example.happyprogramingbackend.entity.User;
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Date;
 
 @Getter
 @Setter

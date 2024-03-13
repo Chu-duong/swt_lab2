@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.dto.Request;
+package com.example.happyprogramingbackend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,9 +10,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChangePasswordDto {
-    private String oldPassword;
+  private String oldPassword;
 
-    private String newPassword;
+  private String newPassword;
 
-    private String rePassword;
+  private String rePassword;
 }
