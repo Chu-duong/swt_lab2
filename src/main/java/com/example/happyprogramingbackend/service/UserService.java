@@ -1,5 +1,11 @@
 package com.example.happyprogramingbackend.service;
 
+<<<<<<< HEAD:src/main/java/com/example/happyprogramingbackend/Service/UserService.java
+=======
+import com.example.happyprogramingbackend.exception.BadRequestException;
+import com.example.happyprogramingbackend.exception.NotFoundException;
+import com.example.happyprogramingbackend.repository.*;
+>>>>>>> c44d9fd (fix package name):src/main/java/com/example/happyprogramingbackend/service/UserService.java
 import com.example.happyprogramingbackend.common.Ultil;
 import com.example.happyprogramingbackend.dto.request.CreateUserDto;
 import com.example.happyprogramingbackend.dto.request.RejectStudent;

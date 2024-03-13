@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class HandleException {
+<<<<<<< HEAD
     @ExceptionHandler(BadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorMessage handleBadRequestException(BadRequestException exception) {
@@ -24,4 +25,23 @@ public class HandleException {
     public ErrorMessage handleOtherException(Exception exception) {
         return new ErrorMessage(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
     }
+=======
+  @ExceptionHandler(BadRequestException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public ErrorMessage handleBadRequestException(BadRequestException exception) {
+    return new ErrorMessage(HttpStatus.BAD_REQUEST, exception.getMessage());
+  }
+
+  @ExceptionHandler(NotFoundException.class)
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  public ErrorMessage handleNotFoundException(NotFoundException exception) {
+    return new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
+  }
+
+  @ExceptionHandler(Exception.class)
+  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+  public ErrorMessage handleOtherException(Exception exception) {
+    return new ErrorMessage(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+  }
+>>>>>>> c44d9fd (fix package name)
 }

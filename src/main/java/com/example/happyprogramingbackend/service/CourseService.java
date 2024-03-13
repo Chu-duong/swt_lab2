@@ -1,9 +1,15 @@
 package com.example.happyprogramingbackend.service;
+<<<<<<< HEAD:src/main/java/com/example/happyprogramingbackend/Service/CourseService.java
 import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.dto.response.ChatDetailResponseImp;
 import com.example.happyprogramingbackend.dto.response.CommentResponseImp;
 import com.example.happyprogramingbackend.dto.response.CourseResponse;
 import com.example.happyprogramingbackend.dto.response.LessonResponse;
+=======
+
+import com.example.happyprogramingbackend.exception.BadRequestException;
+import com.example.happyprogramingbackend.repository.*;
+>>>>>>> c44d9fd (fix package name):src/main/java/com/example/happyprogramingbackend/service/CourseService.java
 import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.dto.response.ChatDetailResponseImp;
 import com.example.happyprogramingbackend.dto.response.CommentResponseImp;
