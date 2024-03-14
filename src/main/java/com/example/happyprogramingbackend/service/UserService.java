@@ -1,31 +1,18 @@
 package com.example.happyprogramingbackend.service;
 
-<<<<<<< HEAD:src/main/java/com/example/happyprogramingbackend/Service/UserService.java
-=======
 import com.example.happyprogramingbackend.exception.BadRequestException;
 import com.example.happyprogramingbackend.exception.NotFoundException;
 import com.example.happyprogramingbackend.repository.*;
->>>>>>> c44d9fd (fix package name):src/main/java/com/example/happyprogramingbackend/service/UserService.java
 import com.example.happyprogramingbackend.common.Ultil;
-import com.example.happyprogramingbackend.dto.request.CreateUserDto;
-import com.example.happyprogramingbackend.dto.request.RejectStudent;
-import com.example.happyprogramingbackend.dto.request.UpdateUserDto;
-import com.example.happyprogramingbackend.dto.response.UserResponse;
-import com.example.happyprogramingbackend.dto.request.CreateUserDto;
-import com.example.happyprogramingbackend.dto.request.RejectStudent;
-import com.example.happyprogramingbackend.dto.request.UpdateUserDto;
+import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.dto.response.UserResponse;
 import com.example.happyprogramingbackend.entity.*;
-import com.example.happyprogramingbackend.exception.BadRequestException;
-import com.example.happyprogramingbackend.exception.NotFoundException;
-import com.example.happyprogramingbackend.repository.*;
+import java.util.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -72,13 +59,13 @@ public class UserService {
                 }))
                 .build();
 
-        if (flag == true) {
+        if (flag) {
             user.setIsVerified(true);
         }
         User userResponse = userRepository.save(user);
         String fullName = request.getFirstName() + " " + request.getMiddleName() + " " + request.getLastName();
         try {
-            if (flag == true
+            if (flag
             ) {
                 emailService.sendResetPassword(request.getEmail(), fullName, password);
             } else {

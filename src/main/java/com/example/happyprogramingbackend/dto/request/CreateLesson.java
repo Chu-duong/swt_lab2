@@ -10,12 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateLesson {
-    private Long courseId;
+  private Long courseId;
 
-    private String subject;
+  private String subject;
 
-    private String description;
+  private String description;
 
-    private String files;
-
+  private String files;
 }

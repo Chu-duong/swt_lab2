@@ -1,10 +1,9 @@
 package com.example.happyprogramingbackend.common;
 
-import org.apache.commons.lang3.RandomStringUtils;
-
 import java.security.SecureRandom;
 import java.text.Normalizer;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.RandomStringUtils;
 
 public class Ultil {
 
@@ -16,6 +15,7 @@ public class Ultil {
    public static String generateRandomPassword(){
        char[] possibleCharacters = (new String("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()-_=+[{]}\\|;:\'\",<.>/?")).toCharArray();
        return RandomStringUtils.random( 8, 0, possibleCharacters.length-1, false, false, possibleCharacters, new SecureRandom() );
+
    }
 
 }

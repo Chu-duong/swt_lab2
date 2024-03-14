@@ -10,7 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CheckEmailDto {
-    private String email;
-
-
+  private String email;
 }

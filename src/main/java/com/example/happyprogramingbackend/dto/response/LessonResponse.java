@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,12 +14,9 @@ public class LessonResponse {
 
     private Long id;
 
-
     private String subject;
 
-
     private String description;
-
 
     private String files;
 
@@ -35,6 +31,5 @@ public class LessonResponse {
         this.files = entity.getFiles();
         this.createdByName = entity.getCreatedByName();
         this.avatar = entity.getAvatar();
-
     }
 }

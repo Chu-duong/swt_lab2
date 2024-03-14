@@ -19,16 +19,21 @@ public class ChatDetailResponseImp {
     private String key;
     private String status;
     private Boolean statusCourse;
-    public ChatDetailResponseImp(ChatDetail entity,String role) {
+
+    public ChatDetailResponseImp(ChatDetail entity, String role) {
         this.id = entity.getId();
         this.avatar = entity.getGroupChat().getCourse().getAvatar();
         this.key = entity.getGroupChat().getCourse().getName();
         this.groupChatId = entity.getGroupChat().getId();
-        if(role == "TC") {
-            this.status = (entity.getGroupChat().getCourse()
-                    .getStudents().stream().filter(menteeCourse -> menteeCourse.getStudent().getId() == entity.getUser().getId()).findFirst()).get().getStatus();
+        if (role == "TC") {
+            this.status =
+                    (entity.getGroupChat().getCourse().getStudents().stream()
+                            .filter(
+                                    menteeCourse -> menteeCourse.getStudent().getId() == entity.getUser().getId())
+                            .findFirst())
+                            .get()
+                            .getStatus();
         }
-       this.statusCourse=entity.getGroupChat().getCourse().getIsActive();
-
+        this.statusCourse = entity.getGroupChat().getCourse().getIsActive();
     }
 }

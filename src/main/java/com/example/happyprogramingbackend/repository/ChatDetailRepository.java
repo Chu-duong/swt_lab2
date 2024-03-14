@@ -12,22 +12,6 @@ import java.util.List;
 @Repository
 public interface ChatDetailRepository extends JpaRepository<ChatDetail, Long> {
 
-<<<<<<< HEAD
-    @Query("SELECT m FROM ChatDetail m WHERE (m.user.id = ?1)")
-    List<ChatDetail> getGroupChatByUser(Long userId);
-
-    @Modifying
-    @Transactional
-    @Query("delete from ChatDetail b where b.groupChat.id = ?1 and b.type = 'TC'")
-    void deleteChatDetailBy(Long courseId);
-
-    @Modifying
-    @Transactional
-    @Query("delete from ChatDetail b where b.user.id = ?1 and b.groupChat.id = ?2")
-    void deleteChatDetailByStudent(Long studentId,Long groupChatId);
-}
-
-=======
   @Query("SELECT m FROM ChatDetail m WHERE (m.user.id = ?1)")
   List<ChatDetail> getGroupChatByUser(Long userId);
 
@@ -41,4 +25,3 @@ public interface ChatDetailRepository extends JpaRepository<ChatDetail, Long> {
   @Query("delete from ChatDetail b where b.user.id = ?1 and b.groupChat.id = ?2")
   void deleteChatDetailByStudent(Long studentId, Long groupChatId);
 }
->>>>>>> c44d9fd (fix package name)

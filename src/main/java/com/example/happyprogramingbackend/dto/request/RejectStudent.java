@@ -10,5 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RejectStudent {
-    private String reason;
+  private String reason;
 }

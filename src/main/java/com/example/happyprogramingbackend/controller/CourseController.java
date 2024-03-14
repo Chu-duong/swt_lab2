@@ -1,6 +1,5 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.service.CourseService;
 import com.example.happyprogramingbackend.dto.request.CreateCommentDto;
 import com.example.happyprogramingbackend.dto.request.CreateCourseDto;
@@ -9,7 +8,6 @@ import com.example.happyprogramingbackend.dto.request.UpdateCommentDto;
 import com.example.happyprogramingbackend.dto.request.UpdateCourseDto;
 import com.example.happyprogramingbackend.dto.request.UpdateLesson;
 import com.example.happyprogramingbackend.entity.User;
-import com.example.happyprogramingbackend.service.CourseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

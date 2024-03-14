@@ -12,13 +12,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateCourseDto {
-    private String courseKey;
+  private String courseKey;
 
-    private String name;
+  private String name;
 
-    private String description;
+  private String description;
 
-    private List<Long> mentors;
+  private List<Long> mentors;
 
-    private String avatar;
+  private String avatar;
 }

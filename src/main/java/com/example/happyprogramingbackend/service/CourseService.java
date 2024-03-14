@@ -1,34 +1,21 @@
 package com.example.happyprogramingbackend.service;
-<<<<<<< HEAD:src/main/java/com/example/happyprogramingbackend/Service/CourseService.java
-import com.example.happyprogramingbackend.dto.request.*;
-import com.example.happyprogramingbackend.dto.response.ChatDetailResponseImp;
-import com.example.happyprogramingbackend.dto.response.CommentResponseImp;
-import com.example.happyprogramingbackend.dto.response.CourseResponse;
-import com.example.happyprogramingbackend.dto.response.LessonResponse;
-=======
 
 import com.example.happyprogramingbackend.exception.BadRequestException;
 import com.example.happyprogramingbackend.repository.*;
->>>>>>> c44d9fd (fix package name):src/main/java/com/example/happyprogramingbackend/service/CourseService.java
 import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.dto.response.ChatDetailResponseImp;
 import com.example.happyprogramingbackend.dto.response.CommentResponseImp;
 import com.example.happyprogramingbackend.dto.response.CourseResponse;
 import com.example.happyprogramingbackend.dto.response.LessonResponse;
 import com.example.happyprogramingbackend.entity.*;
-import com.example.happyprogramingbackend.exception.BadRequestException;
-import com.example.happyprogramingbackend.repository.*;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import static java.util.Arrays.stream;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor

@@ -6,7 +6,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,13 +22,15 @@ public class CustomFilter extends OncePerRequestFilter {
 
     private final JwtTokenUtil jwtTokenUtil;
 
-  public CustomFilter(UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil) {
-    this.userDetailsService = userDetailsService;
-    this.jwtTokenUtil = jwtTokenUtil;
-  }
+    public CustomFilter(UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil) {
+        this.userDetailsService = userDetailsService;
+        this.jwtTokenUtil = jwtTokenUtil;
+    }
 
-  @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    @Override
+    protected void doFilterInternal(
+            HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
 
         // Lấy token từ header
         // Authorization : Bearer jdkalcnmmkksks
@@ -59,7 +60,8 @@ public class CustomFilter extends OncePerRequestFilter {
 
         if (jwtTokenUtil.validateJwtToken(token)) {
             // Tạo đối tượng xác thực
-            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
 
             // Xác thực thành công, lưu object Authentication vào SecurityContextHolder
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

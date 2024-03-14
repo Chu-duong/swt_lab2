@@ -18,56 +18,53 @@ import java.io.IOException;
 @Slf4j
 public class FileController {
 
-    @Autowired
-    FilesStorageService storageService;
+  @Autowired FilesStorageService storageService;
 
-    @GetMapping("")
-    public ResponseEntity<InputStreamResource> download(
-            @RequestParam(name = "nameFile", required = false) String nameFile
-    ) throws IOException {
-        System.out.println(nameFile);
-        File file = new File("./src/data/" + nameFile);
-        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+  @GetMapping("")
+  public ResponseEntity<InputStreamResource> download(
+      @RequestParam(name = "nameFile", required = false) String nameFile) throws IOException {
+    System.out.println(nameFile);
+    File file = new File("./src/data/" + nameFile);
+    InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
 
-        return ResponseEntity.ok()
-                .header("Content-Disposition", "attachment; filename=\"" + file.getName() + "\"")
-                .contentLength(file.length())
-                .contentType(MediaType.APPLICATION_OCTET_STREAM)
-                .body(resource);
+    return ResponseEntity.ok()
+        .header("Content-Disposition", "attachment; filename=\"" + file.getName() + "\"")
+        .contentLength(file.length())
+        .contentType(MediaType.APPLICATION_OCTET_STREAM)
+        .body(resource);
+  }
+
+  @PostMapping("")
+  public String upload(@RequestParam("file") MultipartFile file) {
+    try {
+      storageService.save(file);
+
+      return file.getOriginalFilename();
+    } catch (Exception e) {
+      throw e;
     }
+  }
 
-    @PostMapping("")
-    public String upload(@RequestParam("file") MultipartFile file) {
-        try {
-            storageService.save(file);
-
-            return file.getOriginalFilename();
-        } catch (Exception e) {
-            throw e;
-        }
+  @PostMapping("image")
+  public String uploadImage(@RequestParam("file") MultipartFile file) {
+    try {
+      return storageService.saveImage(file);
+    } catch (Exception e) {
+      throw e;
     }
+  }
 
-    @PostMapping("image")
-    public String uploadImage(@RequestParam("file") MultipartFile file) {
-        try {
-            return storageService.saveImage(file);
-        } catch (Exception e) {
-            throw e;
-        }
+  @DeleteMapping("")
+  public Boolean delete(@RequestParam(name = "nameFile", required = true) String nameFile)
+      throws IOException {
+    try {
+      File file = new File("./src/data/" + nameFile);
+      file.delete();
+
+      return file.delete();
+    } catch (Exception e) {
+      System.out.println(e);
+      throw e;
     }
-
-    @DeleteMapping("")
-    public Boolean delete(
-            @RequestParam(name = "nameFile", required = true) String nameFile
-    ) throws IOException {
-        try {
-            File file = new File("./src/data/" + nameFile);
-            file.delete();
-
-            return file.delete();
-        } catch (Exception e) {
-            System.out.println(e);
-            throw e;
-        }
-    }
+  }
 }

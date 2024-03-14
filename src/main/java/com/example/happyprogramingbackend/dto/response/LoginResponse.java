@@ -14,15 +14,20 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class LoginResponse {
     private UserDetails auth;
     private String token;
+
     @JsonProperty("isAuthenticated")
     private boolean isAuthenticated;
 
     @Override
     public String toString() {
-        return "LoginResponse{" +
-                "auth=" + auth +
-                ", token='" + token + '\'' +
-                ", isAuthenticated=" + isAuthenticated +
-                '}';
+        return "LoginResponse{"
+                + "auth="
+                + auth
+                + ", token='"
+                + token
+                + '\''
+                + ", isAuthenticated="
+                + isAuthenticated
+                + '}';
     }
 }

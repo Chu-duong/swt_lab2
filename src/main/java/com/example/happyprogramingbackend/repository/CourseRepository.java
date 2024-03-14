@@ -9,18 +9,10 @@ import java.util.List;
 
 @Repository
 public interface CourseRepository extends JpaRepository<Course, Long> {
-<<<<<<< HEAD
     @Query("SELECT m FROM Course m WHERE (m.courseKey LIKE %?1% or m.name LIKE %?1% )")
-    List<Course> searchAllBy( String keyword);
+    List<Course> searchAllBy(String keyword);
 
-    @Query("SELECT m FROM Course m WHERE (m.courseKey LIKE %?1% or m.name LIKE %?1% ) and m.isActive = ?2")
-    List<Course> searchAllWithStatus( String keyword,Boolean isActive);
-=======
-  @Query("SELECT m FROM Course m WHERE (m.courseKey LIKE %?1% or m.name LIKE %?1% )")
-  List<Course> searchAllBy(String keyword);
-
-  @Query(
-      "SELECT m FROM Course m WHERE (m.courseKey LIKE %?1% or m.name LIKE %?1% ) and m.isActive = ?2")
-  List<Course> searchAllWithStatus(String keyword, Boolean isActive);
->>>>>>> c44d9fd (fix package name)
+    @Query(
+            "SELECT m FROM Course m WHERE (m.courseKey LIKE %?1% or m.name LIKE %?1% ) and m.isActive = ?2")
+    List<Course> searchAllWithStatus(String keyword, Boolean isActive);
 }

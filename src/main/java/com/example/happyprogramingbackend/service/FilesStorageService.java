@@ -4,15 +4,13 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.*;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Stream;
-
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.UUID;
 
 @Service
 public class FilesStorageService {
@@ -51,7 +49,7 @@ public class FilesStorageService {
     public String saveImage(MultipartFile file) {
         try {
             String extenson = this.getExtensionByStringHandling(file.getOriginalFilename()).get();
-            String fileName= UUID.randomUUID().toString() + "." + extenson;
+            String fileName= UUID.randomUUID() + "." + extenson;
             Files.copy(file.getInputStream(), this.root.resolve(fileName));
 
             return fileName;

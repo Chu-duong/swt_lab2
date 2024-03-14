@@ -14,31 +14,43 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private final CustomFilter customFilter;
-    private final AuthenticationProvider authenticationProvider;
-    private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+  private final CustomFilter customFilter;
+  private final AuthenticationProvider authenticationProvider;
+  private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
 
-    @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .cors()
-                .and()
-                .csrf().disable()
-                //config quyền truy cập api
-                .authorizeHttpRequests()
-                .requestMatchers("/login", "/register","/verify/{id}","/check-email","/reset-password","/api/course","/api/course/{id}","/api/file","/api/file/**","/api/user/{id}").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .exceptionHandling()
-                .authenticationEntryPoint(customAuthenticationEntryPoint)
-                .and()
-                //không sử dụng session lưu lại trạng thái của principal (current login user)
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                //lớp lọc jwt token sẽ được thực thi trước các lớp lọc mặc định
-                .authenticationProvider(authenticationProvider)
-                .addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
-        return http.build();
-    }
+  @Bean
+  SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    http.cors()
+        .and()
+        .csrf()
+        .disable()
+        // config quyền truy cập api
+        .authorizeHttpRequests()
+        .requestMatchers(
+            "/login",
+            "/register",
+            "/verify/{id}",
+            "/check-email",
+            "/reset-password",
+            "/api/course",
+            "/api/course/{id}",
+            "/api/file",
+            "/api/file/**",
+            "/api/user/{id}")
+        .permitAll()
+        .anyRequest()
+        .authenticated()
+        .and()
+        .exceptionHandling()
+        .authenticationEntryPoint(customAuthenticationEntryPoint)
+        .and()
+        // không sử dụng session lưu lại trạng thái của principal (current login user)
+        .sessionManagement()
+        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+        // lớp lọc jwt token sẽ được thực thi trước các lớp lọc mặc định
+        .authenticationProvider(authenticationProvider)
+        .addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+    return http.build();
+  }
 }

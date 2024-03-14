@@ -1,13 +1,13 @@
+
 package com.example.happyprogramingbackend.dto.response;
 
+
 import com.example.happyprogramingbackend.entity.*;
+import java.util.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.*;
-
 
 @Getter
 @Setter
@@ -66,7 +66,6 @@ public class UserResponse {
         } else {
             this.avatar = "https://vdostavka.ru/wp-content/uploads/2019/05/no-avatar.png";
         }
-        ;
         if (entity.getMentorCourse() != null) {
             Set<CourseResponse> set = new HashSet<>();
             for (Course course : entity.getMentorCourse()) {

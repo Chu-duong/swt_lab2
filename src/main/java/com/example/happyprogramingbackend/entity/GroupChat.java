@@ -15,31 +15,29 @@ import java.util.List;
 @Entity
 @Table(name = "group_chat")
 public class GroupChat extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id", nullable = false, unique = true)
+  private Long id;
 
+  @Column(name = "type", nullable = true)
+  private String type;
 
-    @Column(name = "type", nullable = true)
-    private String type;
+  @JsonBackReference
+  @OneToOne
+  @JoinColumn(name = "course_id", referencedColumnName = "id")
+  private Course course;
 
-    @JsonBackReference
-    @OneToOne
-    @JoinColumn(name = "course_id", referencedColumnName = "id")
-    private Course course;
+  @JsonBackReference
+  @OneToOne
+  @JoinColumn(name = "user_id")
+  private User sendTo;
 
-    @JsonBackReference
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User sendTo;
+  @Column(name = "description", columnDefinition = "TEXT")
+  private String description;
 
+  @JsonBackReference
+  @OneToMany(mappedBy = "groupChat")
+  private List<ChatDetail> chatDetails = new ArrayList<>();
 
-    @Column(name = "description", columnDefinition = "TEXT")
-    private String description;
-
-
-    @JsonBackReference
-    @OneToMany(mappedBy = "groupChat")
-    private List<ChatDetail> chatDetails = new ArrayList<>();;
 }
