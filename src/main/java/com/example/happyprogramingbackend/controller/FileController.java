@@ -1,6 +1,6 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.Service.FilesStorageService;
+import com.example.happyprogramingbackend.service.FilesStorageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;

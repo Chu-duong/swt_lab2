@@ -10,18 +10,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoginRequest {
-  private String username;
-  private String password;
+    private String username;
+    private String password;
 
-  @Override
-  public String toString() {
-    return "LoginRequest{"
-        + "username='"
-        + username
-        + '\''
-        + ", password='"
-        + password
-        + '\''
-        + '}';
-  }
+    @Override
+    public String toString() {
+        return "LoginRequest{"
+                + "username='"
+                + username
+                + '\''
+                + ", password='"
+                + password
+                + '\''
+                + '}';
+    }
 }

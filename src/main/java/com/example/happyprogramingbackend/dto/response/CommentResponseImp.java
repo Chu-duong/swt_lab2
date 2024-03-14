@@ -28,7 +28,7 @@ public class CommentResponseImp {
         this.id = entity.getId();
         this.createdByUserId = entity.getCreatedBy().getId();
         this.createdByName= entity.getCreatedBy().getFirstName() + " " + entity.getCreatedBy().getMiddleName() + " " + entity.getCreatedBy().getLastName();
-      this.createdByEmail = entity.getCreatedBy().getEmail();
+        this.createdByEmail = entity.getCreatedBy().getEmail();
         this.createdByAvatar = entity.getCreatedBy().getAvatar();
         this.description = entity.getDescription();
         this.createdAt = entity.getCreatedAt();

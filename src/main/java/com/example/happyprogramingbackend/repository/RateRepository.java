@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Repository;
+package com.example.happyprogramingbackend.repository;
 
 import com.example.happyprogramingbackend.entity.Rate;
 import org.springframework.data.jpa.repository.JpaRepository;

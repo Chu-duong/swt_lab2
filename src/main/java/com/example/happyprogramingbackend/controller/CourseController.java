@@ -1,6 +1,6 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.Service.CourseService;
+import com.example.happyprogramingbackend.service.CourseService;
 import com.example.happyprogramingbackend.dto.request.CreateCommentDto;
 import com.example.happyprogramingbackend.dto.request.CreateCourseDto;
 import com.example.happyprogramingbackend.dto.request.CreateLesson;

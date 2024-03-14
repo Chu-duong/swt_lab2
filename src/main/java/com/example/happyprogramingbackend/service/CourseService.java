@@ -1,7 +1,7 @@
-package com.example.happyprogramingbackend.Service;
+package com.example.happyprogramingbackend.service;
 
-import com.example.happyprogramingbackend.Exception.BadRequestException;
-import com.example.happyprogramingbackend.Repository.*;
+import com.example.happyprogramingbackend.exception.BadRequestException;
+import com.example.happyprogramingbackend.repository.*;
 import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.dto.response.ChatDetailResponseImp;
 import com.example.happyprogramingbackend.dto.response.CommentResponseImp;

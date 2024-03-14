@@ -1,6 +1,6 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.Service.UserService;
+import com.example.happyprogramingbackend.service.UserService;
 import com.example.happyprogramingbackend.dto.request.*;
 import com.example.happyprogramingbackend.entity.User;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Exception;
+package com.example.happyprogramingbackend.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

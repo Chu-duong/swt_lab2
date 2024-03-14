@@ -12,24 +12,24 @@ import lombok.Setter;
 @NoArgsConstructor
 public class LessonResponse {
 
-  private Long id;
+    private Long id;
 
-  private String subject;
+    private String subject;
 
-  private String description;
+    private String description;
 
-  private String files;
+    private String files;
 
-  private String createdByName;
+    private String createdByName;
 
-  private String avatar;
+    private String avatar;
 
-  public LessonResponse(Lesson entity) {
-    this.id = entity.getId();
-    this.subject = entity.getSubject();
-    this.description = entity.getDescription();
-    this.files = entity.getFiles();
-    this.createdByName = entity.getCreatedByName();
-    this.avatar = entity.getAvatar();
-  }
+    public LessonResponse(Lesson entity) {
+        this.id = entity.getId();
+        this.subject = entity.getSubject();
+        this.description = entity.getDescription();
+        this.files = entity.getFiles();
+        this.createdByName = entity.getCreatedByName();
+        this.avatar = entity.getAvatar();
+    }
 }

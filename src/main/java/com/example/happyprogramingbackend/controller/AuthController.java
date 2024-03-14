@@ -1,7 +1,7 @@
 package com.example.happyprogramingbackend.controller;
 
-import com.example.happyprogramingbackend.Service.AuthService;
-import com.example.happyprogramingbackend.Service.UserService;
+import com.example.happyprogramingbackend.service.AuthService;
+import com.example.happyprogramingbackend.service.UserService;
 import com.example.happyprogramingbackend.dto.request.CheckEmailDto;
 import com.example.happyprogramingbackend.dto.request.CreateUserDto;
 import com.example.happyprogramingbackend.dto.request.LoginRequest;

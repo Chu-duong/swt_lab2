@@ -1,4 +1,4 @@
-package com.example.happyprogramingbackend.Service;
+package com.example.happyprogramingbackend.service;
 
 import com.example.happyprogramingbackend.common.JwtTokenUtil;
 import com.example.happyprogramingbackend.dto.request.LoginRequest;

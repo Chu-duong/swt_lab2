@@ -1,6 +1,6 @@
 package com.example.happyprogramingbackend.common;
 
-import com.example.happyprogramingbackend.Repository.UserRepository;
+import com.example.happyprogramingbackend.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
 
 @Configuration
 public class ApplicationConfig {

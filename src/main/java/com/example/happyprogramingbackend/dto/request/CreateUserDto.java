@@ -12,25 +12,25 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateUserDto {
-  private String password;
+    private String password;
 
-  private String firstName;
+    private String firstName;
 
-  private String lastName;
+    private String lastName;
 
-  private String middleName;
+    private String middleName;
 
-  private Long roleId;
+    private Long roleId;
 
-  private Date birthday;
+    private Date birthday;
 
-  private String email;
+    private String email;
 
-  private String gender;
+    private String gender;
 
-  private String description;
+    private String description;
 
-  private String skills;
+    private String skills;
 
-  private String avatar;
+    private String avatar;
 }
